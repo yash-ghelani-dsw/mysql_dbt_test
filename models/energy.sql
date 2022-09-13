@@ -3,8 +3,8 @@ with data_sql as (
 ),
 
 final as (
-    select row_id, energy_count, row_id * 100 as row_id_100
-    from data_sql
+    select days, lclid, row_id, energy_max, energy_min, energy_std, CAST ('2014-7-31 15:42:52' AS TIMESTAMP) as created_at
+    from data_sql 
 )
 
 select * from final
